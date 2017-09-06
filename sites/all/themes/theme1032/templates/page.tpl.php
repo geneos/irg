@@ -78,7 +78,7 @@ endif; ?>
 	<a href="#main-menu" class="element-invisible element-focusable"><?php print t( 'Skip to navigation' ); ?></a>
 <?php endif; ?>
 <a href="#content" class="element-invisible element-focusable"><?php print t( 'Skip to main content' ); ?></a>
-
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <div id="page-wrapper" class="page-wrapper">
 	<div id="page" class="page">
@@ -188,6 +188,13 @@ endif; ?>
 			theme1032_region_preffix ( 'section_4' );
 				print render( $page['section_4'] );
 			theme1032_region_suffix ( 'section_4' );
+		endif; ?>
+
+		<!-- Region Section 4 2 -->
+		<?php if ( $page['section_4_2'] ) : 
+			theme1032_region_preffix ( 'section_4_2' );
+				print render( $page['section_4_2'] );
+			theme1032_region_suffix ( 'section_4_2' );
 		endif; ?>
 		
 		<!-- Region Section 5 -->

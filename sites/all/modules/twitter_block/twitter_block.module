@@ -424,7 +424,7 @@ function twitter_block_block_view($delta) {
     '#options' => array(
       'attributes' => array(
         'class' => array('twitter-timeline'),
-        'data-widget-id' => $config['widget_id'],
+ //       'data-widget-id' => $config['widget_id'],
       ),
       'html' => FALSE,
     ),
