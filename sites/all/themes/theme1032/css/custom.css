@@ -444,15 +444,43 @@ ul.menu li a:hover {
 }
 
 .view-block-4 .slick--carousel .header {
-	height: 100px;
+	height: 30px;
     overflow: hidden;
+    color: #756f63;
+    text-align: right;
+}
+
+.view-block-4 .slick--carousel .header .fa{
+	margin-right: 5px;
+}
+
+
+.view-block-4 .slick--carousel .views-field-nothing{
+	margin: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
 .view-block-4 .slick--carousel .title {
-	color:#b02724;
-	padding: 30px 45px 45px 45px;
-	display:block;
-	height: 170px;
+	padding: 30px 45px 10px 45px;
+    margin-bottom: 30px;
+    display: block;
+    height: 130px;
+    margin-top: -30px;
+    line-height: 130px;
+    color: #48788C;
+    border-color: #48788C;
+    vertical-align: middle;
+    border-left: 35px solid;
+}
+
+.view-block-4 .slick--carousel .title a{
+	line-height: 18px;
+	display: inline-block;
+}
+
+.view-block-4 .slick--carousel .title a:hover{
+	color:#756f63;
 }
 
 .view-block-4 .slick--carousel .footer {
@@ -472,6 +500,10 @@ ul.menu li a:hover {
 
 .view-block-4 .footer span.date {
 	font-size: 11px;
+}
+
+.view-block-4 .footer span.date span{
+	display: inline-block;
 }
 
 .slick-arrow::before {
@@ -527,6 +559,11 @@ ul.menu li a:hover {
 	border-bottom:none;
 }
 
+.block-views-blog-home-block .category a{
+	color: #FFF;
+    text-transform: uppercase;
+}
+
 .block-views-blog-home-block .blog_autor {
 	float:left;
 	width:20%;
@@ -564,7 +601,8 @@ ul.menu li a:hover {
 }
 
 .block-views-blog-home-block .blog_content .title a{
-	font-size: 16px;
+	font-size: 26px;
+    line-height: 26px;
     font-weight: 600;
     color:#FFF;
     margin: 10px 0;
