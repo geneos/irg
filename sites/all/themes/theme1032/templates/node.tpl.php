@@ -88,43 +88,7 @@
 					<h5 class="title node-title"<?php print $title_attributes; ?>>
 						<a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a>
 					</h5>
-				<?php print render( $title_suffix );
-			endif; ?>
-
-			<!-- Node meta -->
-			<?php if ( $display_submitted ) : ?>
-				<div class="submitted node-submitted" role="contentinfo">
-					<ul class="submitted-list clearfix">
-						<?php if ( $user_picture ) : // author icon ?>
-							<li class="node-userpic"><?php print $user_picture; ?></li>
-						<?php endif; ?>
-	
-						<?php if ( $submitted ) : // node author ?>
-							<li class="node-author"><span class="fa fa-fw fa-user"></span> <?php print $submitted; ?></li>
-						<?php endif;
-	
-						if ( $submitted_pubdate ) : // publish date ?>
-							<li class="node-time" >
-								<time datetime="<?php print $submitted_pubdate; ?>">
-									<span class="fa fa-fw fa-calendar"></span> <?php print $submitted_date; ?>
-								</time>
-							</li>
-						<?php endif; ?>
-	
-						<li class="node-views">
-							<span class="fa fa-fw fa-eye"></span>
-							<?php print $hitcount['totalcount'] ? $hitcount['totalcount'] : "0"; // node views
-							print " view(s)"; ?>
-						</li>
-	
-						<?php if ( $teaser ) : // number of comments ?>
-							<li class="node-comments">
-								<span class="fa fa-fw fa-comment"></span>
-								<a href="<?php echo $node_url;?>#comments"><?php print $comment_count . t( " comment(s)" ); ?> </a>
-							</li>
-						<?php endif; ?>
-					</ul>
-				</div>
+				<?php print render( $title_suffix ); ?>
 			<?php endif; ?>
 		</header>
 	<?php endif; ?>
@@ -145,13 +109,13 @@
 			<?php print render( $content['field_tags'] ); ?>
 			
 			<!-- Node links -->
-			<?php if ( $links = render( $content['links'] ) ): ?>
+			<?/*php if ( $links = render( $content['links'] ) ): ?>
 				<div class="node-links clearfix">
 					<?php print $links; ?>
 				</div>
-			<?php endif; ?>
+			<?php endif;*/ ?>
 		</footer>
 	<?php endif;
 
-	print render( $content['comments'] ); ?>
+	//print render( $content['comments'] ); ?>
 </div>
