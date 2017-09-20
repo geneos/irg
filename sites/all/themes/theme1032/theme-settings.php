@@ -65,6 +65,13 @@ function theme1032_form_system_theme_settings_alter( &$form, &$form_state ) {
 			'#type'				=> 'checkbox',
 		);
 
+		$form['theme1032_settings']['theme1032_general']['theme1032_multislogan'] = array(
+		    '#type'          => 'textarea',
+		    '#title'         => t('Multilang Slogan'),
+		    '#default_value' => theme_get_setting( 'theme1032_multislogan' ),
+		    '#description'   => t("Slogan right to logo"),
+		  );
+
 		/**
 		 * Breadcrumb settings.
 		 */

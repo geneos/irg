@@ -25,6 +25,31 @@ ul.menu li a:hover {
 }
 
 /** HEADER **/
+#logo {
+	float:left;
+}
+
+#multislogan {
+	float:left;
+	margin-top: 12px;
+    margin-left: 10px;
+}
+
+#multislogan li{
+	color:#bbb6ac;
+	text-transform: initial;
+	font-size:15px;
+	font-weight: 300;
+	margin:0px;
+	padding-left:5px;
+}
+
+.i18n-es #multislogan li.es,
+.i18n-fr #multislogan li.fr,
+.i18n-en #multislogan li.en{
+	font-size:18px
+}
+
 #header .header-box{
 	width: 7%;
     margin-right: 2%;
@@ -153,13 +178,17 @@ ul.menu li a:hover {
 }
 
 .header-section-1 .col2 {
-    padding-top: 60px;
+    padding-top: 55px;
 }
 
 /** MENU **/
 
 #superfish-1 > li {
 	font-family: 'Exo', sans-serif;
+}
+
+#superfish-1 > li {
+    margin: 0 0 0 15px;
 }
 
 .header-section-1 {
@@ -344,6 +373,26 @@ ul.menu li a:hover {
 	color:#9b9b9b;
 	line-height:24px;
 	margin:0 0 20px;
+}
+
+.view-block-3-2-1 .views-field-field-image,
+.view-block-3-2-2 .views-field-field-image,
+.view-block-3-2-3 .views-field-field-image {
+	position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    opacity: 0.1;
+    left: 0;
+    -webkit-transition: opacity 1s; /* Safari */
+    transition: opacity 1s;
+    overflow:hidden;
+}
+
+.view-block-3-2-1 .views-row:hover .views-field-field-image,
+.view-block-3-2-2 .views-row:hover .views-field-field-image,
+.view-block-3-2-3 .views-row:hover .views-field-field-image { 
+	opacity: 0.3;
 }
 
 .view-block-3-2-1 .views-row p,
@@ -763,6 +812,88 @@ ul.menu li a:hover {
 	color:#000;
 }
 
+/* PAGINA MIEMBROS */
+.block-views-members-block .block-title,
+.block-views-members-block-1 .block-title,
+.block-views-members-block-2 .block-title,
+.block-views-members-block-3 .block-title{
+	margin-bottom:0px;
+}
+
+.slick--view--members li {
+	padding:0px;
+}
+
+.slick--view--members .views-field-field-photo img:not(.lazyloader-icon){
+	height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    margin-bottom:10px;
+}
+
+.slick--view--members .views-field-title,
+.slick--view--members .views-field-field-role{
+	color: #756f63;
+    text-align: center;
+    text-transform: capitalize;
+    font-size:16px;
+}
+
+.slick--view--members .views-field-field-role{
+	font-weight:300;
+	font-size:12px;
+}
+
+
+
+/* EL IRG */
+.irg-view .views-row {
+	height:auto;
+	padding:0px;
+}
+
+.irg-view .views-row.even .grid-4 {
+	float:right;
+}
+
+.irg-view .image{
+	text-align:center;
+}
+
+.irg-view .image img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50% !important;
+    overflow: hidden;
+    margin: auto;
+    border: none;
+}
+
+.irg-view .reference {
+    display:inline-block;
+    width: 100%;
+    text-align:center;
+    margin-top:10px;
+}
+.irg-view .reference a{
+    color: #bbb6ac;
+    font-style:italic;
+}
+
+.irg-view .grid-8 h2{
+	color:#b02724;
+	font-size:30px;
+	margin-bottom: 15px;
+	font-weight: 500;
+	text-transform: none;
+    text-align: left;
+}
+
+.irg-view .grid-8 p{
+	color: #756f63
+}
+
 /** FOOTER **/
 #footer_top_wrapper .block-title {
 	font-size:30px;
@@ -890,6 +1021,7 @@ ul.links li a:hover,
 .page-node #node-header .node-title h2{
 	text-transform:initial;
 	text-align:left;
+	margin-top: 35px;
 }
 
 .page-node #content .node-content{
@@ -908,4 +1040,8 @@ ul.links li a:hover,
 
 .container-12 .grid-4 {
     width: 360px;
+}
+
+.container-12 .grid-8 {
+    width: 690px;
 }

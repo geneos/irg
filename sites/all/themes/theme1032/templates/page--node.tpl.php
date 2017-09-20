@@ -124,7 +124,14 @@ endif; ?>
 											<?php print $site_slogan; ?>
 										</div>
 									<?php endif; ?>
+
 								</div><!-- /#name-and-slogan -->
+								
+								<?php if ( theme_get_setting( 'theme1032_multislogan' ) && !empty(theme_get_setting( 'theme1032_multislogan' )) ) : ?>
+									<div id="multislogan" class="multislogan">
+										<?php print theme_get_setting( 'theme1032_multislogan' ); ?>
+									</div>
+								<?php endif; ?>
 							<?php endif; ?>
 						</div>
 										
@@ -218,7 +225,7 @@ endif; ?>
 						<div class="container-12">
 							<div class="grid-12">
 								<div class="node-title"> 
-								<h3><?php print 'TYPE';/*$node->field_report_type*/ ?></h3>
+								<!--h3><?php print 'TYPE';/*$node->field_report_type*/ ?></h3-->
 									<h2 class="title">
 										<?php print $node->title; ?>
 									</h2>

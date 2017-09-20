@@ -125,6 +125,11 @@ endif; ?>
 										</div>
 									<?php endif; ?>
 								</div><!-- /#name-and-slogan -->
+								<?php if ( theme_get_setting( 'theme1032_multislogan' ) && !empty(theme_get_setting( 'theme1032_multislogan' )) ) : ?>
+									<div id="multislogan" class="multislogan">
+										<?php print theme_get_setting( 'theme1032_multislogan' ); ?>
+									</div>
+								<?php endif; ?>
 							<?php endif; ?>
 						</div>
 										
