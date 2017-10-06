@@ -80,7 +80,7 @@ endif; ?>
 <a href="#content" class="element-invisible element-focusable"><?php print t( 'Skip to main content' ); ?></a>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<div id="page-wrapper" class="page-wrapper">
+<div id="page-wrapper" class="page-wrapper single-page">
 	<div id="page" class="page">
 		
 		<!-- Header

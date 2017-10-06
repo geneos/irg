@@ -170,6 +170,19 @@ function theme1032_preprocess_page( &$vars ) {
 		$vars['title'] = theme_get_setting( 'theme1032_blog_title' );
 		$vars['head_title'] = theme_get_setting( 'theme1032_blog_title' );
 	}
+
+	// Allow use of specific template for specific content type
+	if ($node = menu_get_object()) {
+		$vars['node'] = $node;
+		$suggestions = array();
+		$template_filename = 'page';
+
+		$suggestions[] = $template_filename . '__' . 'node';
+		$suggestions[] = $template_filename . '__' . $vars['node']->type;
+
+		$vars['theme_hook_suggestions'] = $suggestions;
+	}
+
 }
 
 /**

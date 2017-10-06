@@ -68,8 +68,6 @@
  * @see template_process()
  */
 ?>
-
-
 <?php if ( !theme_get_setting( 'theme1032_breadcrumb_show' ) ) :
 	$breadcrumb = NULL;
 endif; ?>
@@ -80,7 +78,7 @@ endif; ?>
 <a href="#content" class="element-invisible element-focusable"><?php print t( 'Skip to main content' ); ?></a>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<div id="page-wrapper" class="page-wrapper node-page">
+<div id="page-wrapper" class="page-wrapper subhome">
 	<div id="page" class="page">
 		
 		<!-- Header
@@ -124,9 +122,7 @@ endif; ?>
 											<?php print $site_slogan; ?>
 										</div>
 									<?php endif; ?>
-
 								</div><!-- /#name-and-slogan -->
-								
 								<?php if ( theme_get_setting( 'theme1032_multislogan' ) && !empty(theme_get_setting( 'theme1032_multislogan' )) ) : ?>
 									<div id="multislogan" class="multislogan">
 										<?php print theme_get_setting( 'theme1032_multislogan' ); ?>
@@ -218,25 +214,8 @@ endif; ?>
 			theme1032_region_suffix ( 'section_6' );
 		endif; ?>
 		
+		<?php /*
 		<div id="main-wrapper" class="main-wrapper" role="main">
-			<div id="node-header" class="node-header">
-				<div class="node-darkred-background">
-					<?php if ( $node->title ) : ?>
-						<div class="container-12">
-							<div class="grid-12">
-								<div class="node-title"> 
-								<!--h3><?php print 'TYPE';/*$node->field_report_type*/ ?></h3-->
-									<h2 class="title">
-										<?php print $node->title; ?>
-									</h2>
-								</div>
-							</div>
-						</div>
-					<?php endif; ?>
-				</div>
-
-				
-			</div>
 			<div class="container-12">
 				<div class="grid-12">
 					<div id="main" class="main clearfix">
@@ -267,6 +246,13 @@ endif; ?>
 										<!-- Breadcrumbs -->
 										<div id="breadcrumb" class="breadcrumb clearfix"><?php print $breadcrumb; ?></div>
 									<?php endif; ?>
+			
+									<?php if ( $title && !$is_front ) :
+										print render( $title_prefix ); ?>
+											<!-- Page title -->
+											<h2 id="page-title" class="title page-title" ><?php print $title; ?></h2>
+										<?php print render( $title_suffix );
+									endif; ?>
 			
 									<?php if ( $page['help'] ): ?>
 										<!-- System help block -->
@@ -305,6 +291,7 @@ endif; ?>
 				</div>
 			</div>
 		</div>
+		*/?>
 		
 		<!-- Region Section 7 -->
 		<?php if ( $page['section_7'] ) : 

@@ -464,7 +464,18 @@ ul.menu li a:hover {
 	width:120px;
 	padding:17px 25px;
 	background:#756f63;
+	text-align:center;
 }
+
+.view-block-3-2-1 .post-date .no_date,
+.view-block-3-2-2 .post-date .no_date,
+.view-block-3-2-3 .post-date .no_date{
+	display:inline-block;
+	background:url(../images/icon_date_doc.png) no-repeat center center;
+	height:55px;
+	width:55px;
+}
+
 .view-block-3-2-1 .post-date div,
 .view-block-3-2-2 .post-date div,
 .view-block-3-2-3 .post-date div  {
@@ -606,19 +617,64 @@ ul.menu li a:hover {
     margin-top:-94px;
 }
 
+.block-views-block-4-block {
+	position:relative;
+}
+
+.block-views-block-4-block .goto-subhome{
+	position: absolute;
+	color:transparent;
+    top: -8px;
+    right: 250px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    text-align: center;
+    /*background-color:#bbb6ac;*/
+    background-color:#FFF;
+    -moz-border-radius:25px;
+    -webkit-border-radius:25px;
+    border-radius:25px;
+}
+
+.block-views-block-4-block .goto-subhome:before{
+	content: "\f105";
+    font: normal 40px/60px FontAwesome;
+    color: #b02724;
+    font-size: 50px;
+    line-height: 30px;
+    font-weight: bold;
+    display: block;
+}
+
+.block-views-block-4-block .goto-subhome:hover:before{
+	color:#756f63;
+	text-decoration:none;
+}
+
 .block-views-block-4-block .block-title {
 	color:#FFF;
 	margin-bottom: 14px;
 }
 
 .block-views-blog-home-block .views-row {
-	background-color:#d7d4cd;
 	border-bottom:1px solid #bbb6ac;
 	padding: 30px 20px;
 	margin:0px;
 }
-.block-views-blog-home-block .views-row:hover {
+
+.block-views-blog-home-block .views-row-odd {
+	background-color:#756f63;
+}
+
+.block-views-blog-home-block .views-row-even {
 	background-color:#bbb6ac;
+}
+
+.block-views-blog-home-block .views-row:hover {
+	background-color:#5e574a;
 }
 .block-views-blog-home-block .views-row:last-child {
 	border-bottom:none;
@@ -937,6 +993,41 @@ ul.menu li a:hover {
 	background-color:#111216;
 }
 
+#footer .logo-footer {
+	padding-top: 60px;
+	background:url(../images/logo.png) no-repeat top left;
+	background-size: 66px;
+}
+
+#footer .block-tm-follow {
+	text-align:center;
+}
+
+#footer .block-tm-follow .tm-follow-links{
+	display:inline-block;
+}
+
+#footer_top_wrapper .tm-follow-links .tm-follow-link-wrapper {
+    margin-left: 10px;
+}
+
+#footer_top_wrapper .tm-follow-links .tm-follow-link-wrapper a {
+	height: 50px;
+    width: 50px;
+    text-align: center;
+    background-color: #202020;
+    font-size: 30px;
+    line-height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+}
+
+#footer_top_wrapper .tm-follow-links .tm-follow-link-wrapper a:hover {
+	color:#FFF;
+	background-color: #b02724;
+}
+
 form.simple-subscription-empty #edit-input {
 	border:none;
 }
@@ -1079,3 +1170,92 @@ ul.links li a:hover,
 .container-12 .grid-8 {
     width: 690px;
 }
+
+.grid-10.container,
+.grid-9.container{
+    float:none;
+    margin:0 auto;
+    display:block;
+}
+
+.container-12 .grid-9 .grid-3 {
+    width: 260px;
+}
+
+/*** SUB HOME ***/
+
+.subhome #section_2_wrapper {
+	border-top:70px solid #b02724;
+	border-bottom: 10px solid #b02724;
+}
+
+.subhome .region-section-2 {
+	padding:0px;
+	margin-top:-54px;
+}
+
+.subhome .view-taxonomies-subhome .views-row{
+	text-align:center;
+}
+
+.subhome .view-taxonomies-subhome .views-row a{
+	background-color:#b02724;
+	-moz-border-radius:110px;
+	-webkit-border-radius:110px;
+	border-radius:110px;
+	display:inline-block !important;
+	height: 150px;
+    padding: 32px 0;
+    box-sizing: border-box;
+    width: 150px;
+}
+
+.subhome .view-taxonomies-subhome .views-row a:hover{
+	background-color:#bbb6ac;
+}
+
+.subhome .view-taxonomies-subhome .views-row .views-field-name-i18n span{
+	font-size: 22px;
+	line-height: 30px;
+    text-transform: uppercase;
+    color:#b02724;
+    display: inline-block;
+    margin-top:30px;
+}
+
+.subhome .view-taxonomies-subhome .grid-3 {
+	padding:25px;
+	box-sizing:border-box;
+}
+
+/* documents */
+.subhome #section_5_wrapper {
+	border-bottom:none;
+}
+
+.subhome .documents {
+	border-bottom:1px dashed #d7d4cd;
+	padding-bottom: 0px;
+    margin-bottom: 20px;
+}
+
+.subhome .documents:last-child {
+	border-bottom:none;
+}
+
+.subhome .documents .block-title{
+	color:#756f63;
+	margin-bottom:0px;
+}
+
+.subhome .documents .slick--carousel .title {
+	margin-top:0px;
+	padding: 20px 45px 20px 45px;
+    margin-bottom: 20px;
+}
+
+.subhome .documents .slick--center .slick-track {
+	padding-bottom:0px;
+}
+
+

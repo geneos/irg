@@ -332,7 +332,7 @@ function simple_subscription_form() {
   /*
    * Add JS behavior if the input_content field is not empty
    */
-  $input_content = trim($config['input_content']);
+  $input_content = trim(t('Email Address'));
   if (!empty($input_content)) {
     $form['input']['#attached']['js'][] = drupal_get_path('module', 'simple_subscription') . '/simple_subscription.js';
     $form['input']['#attached']['js'][] = array(
@@ -354,7 +354,7 @@ function simple_subscription_form() {
 
   $form['submit'] = array(
     '#type'  => 'submit',
-    '#value' => token_replace(trim($config['submit_value'])),
+    '#value' => token_replace(trim(t('Subscribe'))),
   );
 
   return $form;
