@@ -209,6 +209,16 @@ ul.menu li a:hover {
     color: #b02724;
 }
 
+#superfish-1 > li ul {
+	top:30px;
+	background:#b02724;
+}
+
+#superfish-1 > li ul li > a:hover, #superfish-1 > li ul li.active-trail > a, #superfish-1 > li ul li.sfHover > a {
+	color:#bbb6ac;
+}
+
+
 /** SLIDER **/
 .view-slider .slider-darkred-background {
 	height: 35%;
