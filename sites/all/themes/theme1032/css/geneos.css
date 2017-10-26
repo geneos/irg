@@ -1147,7 +1147,7 @@ ul.links li a:hover,
     width: 100%;
     background-color: #922f24;
     top: 55%;
-    opacity: 0.6;
+    /*opacity: 0.6;*/
 }
 
 .main-wrapper { 
