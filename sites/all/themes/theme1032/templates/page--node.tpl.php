@@ -220,7 +220,9 @@ endif; ?>
 		
 		<div id="main-wrapper" class="main-wrapper" role="main">
 			<div id="node-header" class="node-header">
-				<div class="node-darkred-background">
+				<div id="node-header-img" style="background-image:url(<?= file_create_url($node->field_image['und'][0]['uri']) ?>)">
+				</div>
+				<div class="node-darkred-background" >
 					<?php if ( $node->title ) : ?>
 						<div class="container-12">
 							<div class="grid-12">

@@ -1101,8 +1101,14 @@ ul.links li a:hover,
 /** NODE **/
 
 
-/* Achicar o agrandar segun tamano slider*/
+
 .page-node #node-header{
+    position: relative;
+}
+
+/* Achicar o agrandar segun tamano slider*/
+.page-node #node-header #node-header-img{
+	opacity: 0.5;
 	background-size:cover;
 	width:100%;
 	padding-bottom: 33%;
@@ -1110,8 +1116,20 @@ ul.links li a:hover,
     position: relative;
 }
 
-.node-type-publication.page-node #node-header{
-	background-image:url(../images/background_document.png);
+.page-node #node-header #node-header-img::after {
+    content: "";
+    background: #b05f5f;
+    opacity:0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.node-type-publication.page-node #node-header > * {
+    z-index: 10;
 }
 
 
