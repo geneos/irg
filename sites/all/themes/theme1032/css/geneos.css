@@ -479,11 +479,13 @@ ul.menu li a:hover {
 
 .view-block-3-2-1 .post-date .no_date,
 .view-block-3-2-2 .post-date .no_date,
-.view-block-3-2-3 .post-date .no_date{
-	display:inline-block;
-	background:url(../images/icon_date_doc.png) no-repeat center center;
-	height:55px;
-	width:55px;
+.view-block-3-2-3 .post-date .no_date {
+	display: inline-block;
+    background: url(../images/icon_calendar.png) no-repeat center center;
+    height: 55px;
+    width: 55px;
+    background-size: 55px;
+    margin-top: 20px;
 }
 
 .view-block-3-2-1 .post-date div,
