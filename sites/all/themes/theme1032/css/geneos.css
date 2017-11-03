@@ -46,12 +46,13 @@ ul.menu li a:hover {
 	font-weight: 300;
 	margin:0px;
 	padding-left:5px;
+	display:none;
 }
 
 .i18n-es #multislogan li.es,
 .i18n-fr #multislogan li.fr,
 .i18n-en #multislogan li.en{
-	font-size:18px
+	display:block;
 }
 
 #header .header-box{
@@ -86,7 +87,7 @@ ul.menu li a:hover {
 .region-header-top {
 	background-color: #b02724;
     margin-bottom: 0px;
-    padding: 8px 0 8px 150px;
+    padding: 8px 0 8px 275px;
     float: right;
     width: 55%;
     box-sizing: border-box;
