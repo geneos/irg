@@ -159,6 +159,14 @@ endif; ?>
 		<!-- Content
 		======================================================================================= -->
 		<!-- Region Section 1 -->
+
+		<?php if ( $title && !$is_front ) :
+			print render( $title_prefix ); ?>
+				<!-- Page title -->
+				<h2 id="page-title" class="title page-title" ><?php print $title; ?></h2>
+			<?php print render( $title_suffix );
+		endif; ?>
+
 		<?php if ( $page['section_1'] ) : 
 			theme1032_region_preffix ( 'section_1' );
 				print render( $page['section_1'] );
@@ -184,6 +192,13 @@ endif; ?>
 			theme1032_region_preffix ( 'section_3_2' );
 				print render( $page['section_3_2'] );
 			theme1032_region_suffix ( 'section_3_2' );
+		endif; ?>
+
+		<!-- Region Section 3 3 -->
+		<?php if ( $page['section_3_3'] ) : 
+			theme1032_region_preffix ( 'section_3_3' );
+				print render( $page['section_3_3'] );
+			theme1032_region_suffix ( 'section_3_3' );
 		endif; ?>
 		
 		<!-- Region Section 4 -->

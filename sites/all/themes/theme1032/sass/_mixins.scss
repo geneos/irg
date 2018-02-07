@@ -1,0 +1,77 @@
+// _mixins.scss
+
+@mixin alpha-background-color($color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  background-color: $solid-color !important;
+  background-color: $color !important;
+}
+
+@mixin grad($first_color, $second_color, $direction: -180deg, $position1: 0 ) {
+  background: $first_color; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($direction,$first_color $position1, $second_color); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($direction,$first_color $position1, $second_color); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($direction,$first_color $position1, $second_color); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($direction,$first_color $position1, $second_color); /* Standard syntax */
+}
+
+@mixin round-borders($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin placeholders($color) {
+  &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    $color;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    $color;
+    opacity:  1;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    $color;
+    opacity:  1;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    $color;
+  }
+}
+
+@mixin circular-image($size) {
+  width: $size;
+  height: $size;
+  @include round-borders($size/2);
+}
+
+@mixin rotate($grades) {
+  -ms-transform: rotate($grades); /* IE 9 */
+  -webkit-transform: rotate($grades); /* Chrome, Safari, Opera */
+   transform: rotate($grades);
+}
+
+//placeholders
+%raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+%raleway-bold {
+   font-family: 'Raleway Bold', sans-serif;
+ }
+
+%raleway-semibold {
+   font-family: 'Raleway Semibold', sans-serif;
+ }
+
+%border-box {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+%center-bg {
+  background-position: center;
+  background-repeat: no-repeat;
+}

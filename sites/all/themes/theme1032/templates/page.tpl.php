@@ -187,6 +187,13 @@ endif; ?>
 				print render( $page['section_3_2'] );
 			theme1032_region_suffix ( 'section_3_2' );
 		endif; ?>
+
+		<!-- Region Section 3 3 -->
+		<?php if ( $page['section_3_3'] ) : 
+			theme1032_region_preffix ( 'section_3_3' );
+				print render( $page['section_3_3'] );
+			theme1032_region_suffix ( 'section_3_3' );
+		endif; ?>
 		
 		<!-- Region Section 4 -->
 		<?php if ( $page['section_4'] ) : 

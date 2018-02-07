@@ -3,3 +3,14 @@ sites/*/settings*.php
 
 # Ignore paths that contain user-generated content.
 sites/*/private
+
+# Ignore logs
+*.log
+
+# Ignore map sass files
+*.map
+
+.sass-cache
+
+sites/default/files/*
+
