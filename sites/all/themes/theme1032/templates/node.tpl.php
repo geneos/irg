@@ -97,7 +97,7 @@
 		<?php // We hide the comments, tags and links now so that we can render them later.
 		hide( $content['comments'] );
 		hide( $content['links'] );
-		hide( $content['field_tags'] ); ?>
+		//hide( $content['field_tags'] ); ?>
 
 		<!-- Node content -->
 		<?php print render( $content ); ?>
@@ -106,7 +106,7 @@
 	<?php if ( !empty( $content['field_tags'] ) || !empty( $content['links'] ) ) : ?>
 		<footer class="footer node-footer" role="contentinfo">
 			<!-- Node tags -->
-			<?php print render( $content['field_tags'] ); ?>
+			<?php //print render( $content['field_tags'] ); ?>
 			
 			<!-- Node links -->
 			<?/*php if ( $links = render( $content['links'] ) ): ?>

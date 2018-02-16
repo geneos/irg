@@ -10,6 +10,10 @@
 
 @import "home";
 
+a {
+	color:$main-red;
+}
+
 /* Parallax FIX */
 .parallax-bg {
 	display:none;
@@ -276,6 +280,7 @@ ul.menu li a:hover {
 
 .view-slider .flex-caption h2.title-1{
     margin-bottom:5px !important;
+    margin-top:10px !important;
 }
 
 /* Ver el width en los distintos quiebres para que siempre quede como el contenido */
@@ -609,6 +614,7 @@ ul.menu li a:hover {
     	font: 600 30px/1em 'Exo', sans-serif;
     	height: 70px;
     	position:relative;
+    	color:#FFF;
 
     	span {
     		position: absolute;
@@ -619,6 +625,29 @@ ul.menu li a:hover {
 		    text-align:center;
     	}
     }
+}
+
+.node-type-publication,
+.node-type-activities {
+
+	#section_8_wrapper {
+
+		.block-title {
+	    	font: 600 30px/1em 'Exo', sans-serif;
+	    	height: 70px;
+	    	position:relative;
+	    	color:#FFF;
+
+	    	span {
+	    		position: absolute;
+			    width: 100%;
+			    left: 50%;
+			    top: 50%;
+			    transform: translate(-50%, -50%);
+			    text-align:center;
+	    	}
+	    }
+	}
 }
 
 .block-twitter-block,
@@ -1292,7 +1321,7 @@ ul.links li a:hover,
 
 /* Achicar o agrandar segun tamano slider*/
 .page-node #node-header #node-header-img{
-	opacity: 0.3;
+	opacity: 0.5;
 	background-size:cover;
 	width:100%;
 	padding-bottom: 33%;
@@ -1302,8 +1331,8 @@ ul.links li a:hover,
 
 .page-node #node-header #node-header-img::after {
     content: "";
-    background: #b05f5f;
-    opacity:0.7;
+    background:$main-red;
+    opacity:0.5;
     position: absolute;
     top: 0;
     left: 0;
@@ -1332,6 +1361,7 @@ ul.links li a:hover,
     background-color: #922f24;
     top: 55%;
     /*opacity: 0.6;*/
+    @include alpha-background-color(rgba($dark-gray,0.6),white);
 }
 
 .main-wrapper { 
@@ -1383,6 +1413,10 @@ ul.links li a:hover,
     width: 690px;
 }
 
+.container-12 .grid-2 {
+    width: 164px;
+}
+
 .grid-10.container,
 .grid-9.container{
     float:none;
@@ -1417,8 +1451,8 @@ ul.links li a:hover,
 			.views-field-counter {
 				a {
 					color: white;
-    				font-size: 75px;
-    				padding-top: 60px;
+    				font-size: 60px;
+    				padding-top: 50px;
 
     				&:hover{
     					text-decoration:none;
@@ -1429,23 +1463,33 @@ ul.links li a:hover,
 			margin-bottom: 0px;
 			min-height:290px;
 		}
+
+		a {
+			background-color:$main-red;
+			-moz-border-radius:110px;
+			-webkit-border-radius:110px;
+			border-radius:110px;
+			display:inline-block !important;
+			height: 150px;
+		    padding: 32px 0;
+		    box-sizing: border-box;
+		    width: 150px;
+		}
+
+		&.numbers {
+			a {
+				height: 115px;
+				width: 115px;
+			}
+			
+		}
 	}
+
+
 }
 
 .subhome .view-taxonomies-subhome .views-row{
 	text-align:center;
-}
-
-.subhome .view-taxonomies-subhome .views-row a{
-	background-color:$main-red;
-	-moz-border-radius:110px;
-	-webkit-border-radius:110px;
-	border-radius:110px;
-	display:inline-block !important;
-	height: 150px;
-    padding: 32px 0;
-    box-sizing: border-box;
-    width: 150px;
 }
 
 .subhome .view-taxonomies-subhome .views-row a:hover{
@@ -1494,4 +1538,130 @@ ul.links li a:hover,
 
 .subhome .documents .slick--center .slick-track {
 	padding-bottom:0px;
+}
+
+/*** PAGINA INDIVIDUAL ***/
+
+
+.node-type-publication,
+.node-type-activities {
+	
+	#section_8_wrapper {
+		border-top:70px solid $main-red;
+
+		.region-section-8 {
+			margin-top:-100px;
+		}
+	}
+}
+
+/* miembro */
+
+.node-type-miembro {
+	#node-header-img {
+		background-image: url(../images/collectif-irg.jpg);
+    	background-position:center center;
+	}
+
+	.field-name-field-photo {
+		float:left;
+
+		img {
+			 @include round-borders(150px);
+			 width:300px;
+			 height:300px;
+			 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+		}
+	}
+
+	.field-name-field-role {
+		font-size:14px;
+		color:$dark-gray;
+		margin-bottom:10px;
+		padding-top: 40px;
+    	margin-left: 325px;
+    	text-transform: uppercase;
+    	font-style: italic;
+	}
+
+	.field-name-field-descripcion {
+		font-size:14px;
+		color:$text-common;
+		font-weight:500;
+    	margin-left: 325px;
+	}
+}
+
+/* actividad */
+.node-type-activities {
+
+	.field-name-field-type .links{
+		margin-bottom:10px;
+		a {
+			 color:$main-red;
+			 text-transform:uppercase;
+			 margin-bottom:10px;
+			 font-size:14px;
+		}
+	}
+
+	.field-name-field-fecha {
+		font-size:14px;
+		color:$dark-gray;
+		text-transform:uppercase;
+	}
+
+	.field-name-body {
+		font-size:14px;
+		color:$text-common;
+	}
+}
+
+/* publicacion */
+.node-type-publication {
+
+	.field-name-field-report-type {
+		overflow:initial;
+
+
+		.links{
+
+			margin-bottom:10px;
+
+			li {
+				float:none;
+				a {
+					 color:$main-red;
+					 text-transform:uppercase;
+					 margin-bottom:10px;
+					 font-size:14px;
+				}
+			}
+		}
+
+		&.clearfix:after {
+			clear:none;
+		}
+		
+	}
+
+	.field-name-field-imagen-portada {
+		float:left;
+		width:550px;
+		margin-right:25px
+		img {
+			 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+		}
+	}
+
+	.field-name-field-fecha {
+		font-size:14px;
+		color:$dark-gray;
+		text-transform:uppercase;
+	}
+
+	.field-name-body {
+		font-size:14px;
+		color:$text-common;
+	}
 }

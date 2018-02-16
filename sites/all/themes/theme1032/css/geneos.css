@@ -1,3 +1,6 @@
+a {
+  color: #C53C2D; }
+
 /* Parallax FIX */
 .parallax-bg {
   display: none; }
@@ -210,7 +213,8 @@ ul.menu li a:hover {
   line-height: 40px; }
 
 .view-slider .flex-caption h2.title-1 {
-  margin-bottom: 5px !important; }
+  margin-bottom: 5px !important;
+  margin-top: 10px !important; }
 
 /* Ver el width en los distintos quiebres para que siempre quede como el contenido */
 .flex-direction-nav {
@@ -466,7 +470,8 @@ ul.menu li a:hover {
 .region-section-4 .block-title {
   font: 600 30px/1em 'Exo', sans-serif;
   height: 70px;
-  position: relative; }
+  position: relative;
+  color: #FFF; }
   .block-views-block-3-2-2-block .block-title span,
   #block-views-video-slider-block .block-title span,
   .facebook-block .block-title span,
@@ -474,6 +479,21 @@ ul.menu li a:hover {
   #block-views-blog-home-block .block-title span,
   .block-twitter-block .block-title span,
   .region-section-4 .block-title span {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.node-type-publication #section_8_wrapper .block-title,
+.node-type-activities #section_8_wrapper .block-title {
+  font: 600 30px/1em 'Exo', sans-serif;
+  height: 70px;
+  position: relative;
+  color: #FFF; }
+  .node-type-publication #section_8_wrapper .block-title span,
+  .node-type-activities #section_8_wrapper .block-title span {
     position: absolute;
     width: 100%;
     left: 50%;
@@ -995,7 +1015,7 @@ ul.links li a:hover,
 
 /* Achicar o agrandar segun tamano slider*/
 .page-node #node-header #node-header-img {
-  opacity: 0.3;
+  opacity: 0.5;
   background-size: cover;
   width: 100%;
   padding-bottom: 33%;
@@ -1004,8 +1024,8 @@ ul.links li a:hover,
 
 .page-node #node-header #node-header-img::after {
   content: "";
-  background: #b05f5f;
-  opacity: 0.7;
+  background: #C53C2D;
+  opacity: 0.5;
   position: absolute;
   top: 0;
   left: 0;
@@ -1029,7 +1049,9 @@ ul.links li a:hover,
   width: 100%;
   background-color: #922f24;
   top: 55%;
-  /*opacity: 0.6;*/ }
+  /*opacity: 0.6;*/
+  background-color: #aca9a1 !important;
+  background-color: rgba(117, 111, 99, 0.6) !important; }
 
 .main-wrapper {
   background: none; }
@@ -1069,6 +1091,9 @@ ul.links li a:hover,
 .container-12 .grid-8 {
   width: 690px; }
 
+.container-12 .grid-2 {
+  width: 164px; }
+
 .grid-10.container,
 .grid-9.container {
   float: none;
@@ -1096,15 +1121,11 @@ ul.links li a:hover,
   min-height: 290px; }
   .subhome .view-taxonomies-subhome .views-row .views-field-counter a {
     color: white;
-    font-size: 75px;
-    padding-top: 60px; }
+    font-size: 60px;
+    padding-top: 50px; }
     .subhome .view-taxonomies-subhome .views-row .views-field-counter a:hover {
       text-decoration: none; }
-
-.subhome .view-taxonomies-subhome .views-row {
-  text-align: center; }
-
-.subhome .view-taxonomies-subhome .views-row a {
+.subhome .view-taxonomies-subhome a {
   background-color: #C53C2D;
   -moz-border-radius: 110px;
   -webkit-border-radius: 110px;
@@ -1114,6 +1135,12 @@ ul.links li a:hover,
   padding: 32px 0;
   box-sizing: border-box;
   width: 150px; }
+.subhome .view-taxonomies-subhome.numbers a {
+  height: 115px;
+  width: 115px; }
+
+.subhome .view-taxonomies-subhome .views-row {
+  text-align: center; }
 
 .subhome .view-taxonomies-subhome .views-row a:hover {
   background-color: #bbb6ac; }
@@ -1153,5 +1180,84 @@ ul.links li a:hover,
 
 .subhome .documents .slick--center .slick-track {
   padding-bottom: 0px; }
+
+/*** PAGINA INDIVIDUAL ***/
+.node-type-publication #section_8_wrapper,
+.node-type-activities #section_8_wrapper {
+  border-top: 70px solid #C53C2D; }
+  .node-type-publication #section_8_wrapper .region-section-8,
+  .node-type-activities #section_8_wrapper .region-section-8 {
+    margin-top: -100px; }
+
+/* miembro */
+.node-type-miembro #node-header-img {
+  background-image: url(../images/collectif-irg.jpg);
+  background-position: center center; }
+.node-type-miembro .field-name-field-photo {
+  float: left; }
+  .node-type-miembro .field-name-field-photo img {
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    -ms-border-radius: 150px;
+    border-radius: 150px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+.node-type-miembro .field-name-field-role {
+  font-size: 14px;
+  color: #756f63;
+  margin-bottom: 10px;
+  padding-top: 40px;
+  margin-left: 325px;
+  text-transform: uppercase;
+  font-style: italic; }
+.node-type-miembro .field-name-field-descripcion {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  margin-left: 325px; }
+
+/* actividad */
+.node-type-activities .field-name-field-type .links {
+  margin-bottom: 10px; }
+  .node-type-activities .field-name-field-type .links a {
+    color: #C53C2D;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 14px; }
+.node-type-activities .field-name-field-fecha {
+  font-size: 14px;
+  color: #756f63;
+  text-transform: uppercase; }
+.node-type-activities .field-name-body {
+  font-size: 14px;
+  color: #333; }
+
+/* publicacion */
+.node-type-publication .field-name-field-report-type {
+  overflow: initial; }
+  .node-type-publication .field-name-field-report-type .links {
+    margin-bottom: 10px; }
+    .node-type-publication .field-name-field-report-type .links li {
+      float: none; }
+      .node-type-publication .field-name-field-report-type .links li a {
+        color: #C53C2D;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-size: 14px; }
+  .node-type-publication .field-name-field-report-type.clearfix:after {
+    clear: none; }
+.node-type-publication .field-name-field-imagen-portada {
+  float: left;
+  width: 550px;
+  margin-right: 25px img;
+    margin-right-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+.node-type-publication .field-name-field-fecha {
+  font-size: 14px;
+  color: #756f63;
+  text-transform: uppercase; }
+.node-type-publication .field-name-body {
+  font-size: 14px;
+  color: #333; }
 
 /*# sourceMappingURL=geneos.css.map */

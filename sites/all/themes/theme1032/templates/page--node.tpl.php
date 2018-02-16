@@ -226,8 +226,8 @@ endif; ?>
 		endif; ?>
 		
 		<div id="main-wrapper" class="main-wrapper" role="main">
-			<div id="node-header" class="node-header">
-				<div id="node-header-img" style="background-image:url(<?= file_create_url($node->field_image['und'][0]['uri']) ?>)">
+			<div id="node-header" class="node-header"><?php var_dump($node->field_image); ?>
+				<div id="node-header-img" style="<?php if ($node->field_image != null) echo 'background-image:url('.file_create_url($node->field_image['und'][0]['uri']).')';?>">
 				</div>
 				<div class="node-darkred-background" >
 					<?php if ( $node->title ) : ?>
