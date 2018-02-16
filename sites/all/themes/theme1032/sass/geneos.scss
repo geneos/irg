@@ -1566,11 +1566,22 @@ ul.links li a:hover,
 		}
 	}
 
+	.field-name-field-area .links{
+		margin-bottom:10px;
+		a {
+			 color:$main-red;
+			 text-transform:uppercase;
+			 margin-bottom:10px;
+			 font-size:14px;
+		}
+	}
+
+
 	.field-name-field-role {
 		font-size:14px;
 		color:$dark-gray;
 		margin-bottom:10px;
-		padding-top: 40px;
+		
     	margin-left: 325px;
     	text-transform: uppercase;
     	font-style: italic;
