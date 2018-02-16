@@ -1315,7 +1315,7 @@ ul.links li a:hover,
 
 /* Achicar o agrandar segun tamano slider*/
 .page-node #node-header #node-header-img{
-	opacity: 0.5;
+	/*opacity: 0.5;*/
 	background-size:cover;
 	width:100%;
 	padding-bottom: 33%;
@@ -1326,14 +1326,14 @@ ul.links li a:hover,
 
 .page-node #node-header #node-header-img::after {
     content: "";
-    background:$main-red;
+    background:$gray;
     opacity:0.5;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 0;
 }
 
 .node-type-publication.page-node #node-header > * {
@@ -1353,10 +1353,8 @@ ul.links li a:hover,
 	height: 135px;
     position: absolute;
     width: 100%;
-    background-color: #922f24;
     top: 55%;
-    /*opacity: 0.6;*/
-    @include alpha-background-color(rgba($dark-gray,0.6),white);
+    @include alpha-background-color(rgba($dark-gray,0.8),white);
 }
 
 .main-wrapper { 
@@ -1368,8 +1366,7 @@ ul.links li a:hover,
 }
 
 .page-node #node-header .node-title {
-	background-color:rgba(127,20,27,0.8);
-	height: 176px;
+	@include alpha-background-color(rgba($main-red,0.8),white);	height: 176px;
     padding: 10px 30px;
     margin-top: -32px;
 }
@@ -1587,6 +1584,31 @@ ul.links li a:hover,
 	}
 }
 
+/* videos */
+.node-type-video-interview {
+
+	.field-name-field-fecha {
+		font-size:14px;
+		color:$dark-gray;
+		text-transform:uppercase;
+	}
+
+	.field-name-body {
+		font-size:14px;
+		color:$text-common;
+	}
+
+	.field-name-field-video {
+		float:left;
+		margin-right:25px;
+
+		iframe {
+			width: 550px !important;
+    		height: 308px !important;
+		}
+	}
+}
+
 /* actividad */
 .node-type-activities {
 
@@ -1653,6 +1675,49 @@ ul.links li a:hover,
 		font-size:14px;
 		color:$dark-gray;
 		text-transform:uppercase;
+	}
+
+	.field-name-body {
+		font-size:14px;
+		color:$text-common;
+	}
+}
+
+/* publicacion */
+.node-type-blog {
+
+	.field-name-field-blog-type {
+		overflow:initial;
+
+
+		.links{
+
+			margin-bottom:10px;
+
+			li {
+				float:none;
+				a {
+					 color:$main-red;
+					 text-transform:uppercase;
+					 margin-bottom:10px;
+					 font-size:14px;
+				}
+			}
+		}
+
+		&.clearfix:after {
+			clear:none;
+		}
+		
+	}
+
+	.field-name-field-image {
+		float:left;
+		width:550px;
+		margin-right:25px;
+		img {
+			 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+		}
 	}
 
 	.field-name-body {

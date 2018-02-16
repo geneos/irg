@@ -1009,7 +1009,7 @@ ul.links li a:hover,
 
 /* Achicar o agrandar segun tamano slider*/
 .page-node #node-header #node-header-img {
-  opacity: 0.5;
+  /*opacity: 0.5;*/
   background-size: cover;
   width: 100%;
   padding-bottom: 33%;
@@ -1019,14 +1019,14 @@ ul.links li a:hover,
 
 .page-node #node-header #node-header-img::after {
   content: "";
-  background: #C53C2D;
+  background: #bbb6ac;
   opacity: 0.5;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1; }
+  z-index: 0; }
 
 .node-type-publication.page-node #node-header > * {
   z-index: 10; }
@@ -1042,11 +1042,9 @@ ul.links li a:hover,
   height: 135px;
   position: absolute;
   width: 100%;
-  background-color: #922f24;
   top: 55%;
-  /*opacity: 0.6;*/
-  background-color: #aca9a1 !important;
-  background-color: rgba(117, 111, 99, 0.6) !important; }
+  background-color: #918c82 !important;
+  background-color: rgba(117, 111, 99, 0.8) !important; }
 
 .main-wrapper {
   background: none; }
@@ -1055,7 +1053,8 @@ ul.links li a:hover,
   padding: 0px; }
 
 .page-node #node-header .node-title {
-  background-color: rgba(127, 20, 27, 0.8);
+  background-color: #d16357 !important;
+  background-color: rgba(197, 60, 45, 0.8) !important;
   height: 176px;
   padding: 10px 30px;
   margin-top: -32px; }
@@ -1212,6 +1211,21 @@ ul.links li a:hover,
   font-weight: 500;
   margin-left: 325px; }
 
+/* videos */
+.node-type-video-interview .field-name-field-fecha {
+  font-size: 14px;
+  color: #756f63;
+  text-transform: uppercase; }
+.node-type-video-interview .field-name-body {
+  font-size: 14px;
+  color: #333; }
+.node-type-video-interview .field-name-field-video {
+  float: left;
+  margin-right: 25px; }
+  .node-type-video-interview .field-name-field-video iframe {
+    width: 550px !important;
+    height: 308px !important; }
+
 /* actividad */
 .node-type-activities .field-name-field-type .links {
   margin-bottom: 10px; }
@@ -1252,6 +1266,30 @@ ul.links li a:hover,
   color: #756f63;
   text-transform: uppercase; }
 .node-type-publication .field-name-body {
+  font-size: 14px;
+  color: #333; }
+
+/* publicacion */
+.node-type-blog .field-name-field-blog-type {
+  overflow: initial; }
+  .node-type-blog .field-name-field-blog-type .links {
+    margin-bottom: 10px; }
+    .node-type-blog .field-name-field-blog-type .links li {
+      float: none; }
+      .node-type-blog .field-name-field-blog-type .links li a {
+        color: #C53C2D;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-size: 14px; }
+  .node-type-blog .field-name-field-blog-type.clearfix:after {
+    clear: none; }
+.node-type-blog .field-name-field-image {
+  float: left;
+  width: 550px;
+  margin-right: 25px; }
+  .node-type-blog .field-name-field-image img {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+.node-type-blog .field-name-body {
   font-size: 14px;
   color: #333; }
 
