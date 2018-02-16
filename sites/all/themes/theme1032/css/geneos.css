@@ -428,13 +428,7 @@ ul.menu li a:hover {
     font-weight: bold; }
   .view-actividades-home .post-date .year,
   .view-otras-actividades-home .post-date .year {
-    font-size: 30px;
-    padding: 15px 0 0;
-    position: absolute;
-    bottom: 35px; }
-  .view-actividades-home .post-date .year,
-  .view-otras-actividades-home .post-date .year {
-    font-size: 30px;
+    font-size: 20px;
     padding: 15px 0 0;
     position: absolute;
     bottom: 35px; }
