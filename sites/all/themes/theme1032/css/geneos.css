@@ -1197,13 +1197,19 @@ ul.links li a:hover,
     width: 300px;
     height: 300px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
-.node-type-miembro .field-name-field-area .links {
-  margin-bottom: 10px; }
-  .node-type-miembro .field-name-field-area .links a {
-    color: #C53C2D;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    font-size: 14px; }
+.node-type-miembro .field-name-field-area {
+  overflow: initial; }
+  .node-type-miembro .field-name-field-area .links {
+    margin-bottom: 10px; }
+    .node-type-miembro .field-name-field-area .links li {
+      float: none; }
+      .node-type-miembro .field-name-field-area .links li a {
+        color: #C53C2D;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-size: 14px; }
+  .node-type-miembro .field-name-field-area.clearfix:after {
+    clear: none; }
 .node-type-miembro .field-name-field-role {
   font-size: 14px;
   color: #756f63;

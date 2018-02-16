@@ -1566,16 +1566,30 @@ ul.links li a:hover,
 		}
 	}
 
-	.field-name-field-area .links{
-		margin-bottom:10px;
-		a {
-			 color:$main-red;
-			 text-transform:uppercase;
-			 margin-bottom:10px;
-			 font-size:14px;
-		}
-	}
+	.field-name-field-area {
+		overflow:initial;
 
+
+		.links{
+
+			margin-bottom:10px;
+
+			li {
+				float:none;
+				a {
+					 color:$main-red;
+					 text-transform:uppercase;
+					 margin-bottom:10px;
+					 font-size:14px;
+				}
+			}
+		}
+
+		&.clearfix:after {
+			clear:none;
+		}
+		
+	}
 
 	.field-name-field-role {
 		font-size:14px;
