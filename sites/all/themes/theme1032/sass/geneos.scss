@@ -1095,12 +1095,12 @@ ul.menu li a:hover {
 	}
 
 	.views-field-field-image {
-		float:left;
-		width:200px;
-		margin-right:15px;
 
 		img {
 			@include round-borders(10px);
+			    float: left;
+			    width: 200px;
+			    margin-right: 15px;
 		}
 	}
 
@@ -1120,6 +1120,10 @@ ul.menu li a:hover {
 	{
 		color:$text-common;
 		font-size:$font-size-common;
+	}
+
+	.views-row-odd {
+		clear:both;
 	}
 
 }

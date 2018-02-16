@@ -829,17 +829,15 @@ ul.menu li a:hover {
 .block-views-blog-block .views-field,
 .block-views-blog-block-1 .views-field {
   margin-bottom: 5px; }
-.block-views-blog-block .views-field-field-image,
-.block-views-blog-block-1 .views-field-field-image {
+.block-views-blog-block .views-field-field-image img,
+.block-views-blog-block-1 .views-field-field-image img {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
   float: left;
   width: 200px;
   margin-right: 15px; }
-  .block-views-blog-block .views-field-field-image img,
-  .block-views-blog-block-1 .views-field-field-image img {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    border-radius: 10px; }
 .block-views-blog-block .views-field-title,
 .block-views-blog-block-1 .views-field-title {
   font-size: 20px;
@@ -853,6 +851,9 @@ ul.menu li a:hover {
 .block-views-blog-block-1 .views-field-body {
   color: #333;
   font-size: 15px; }
+.block-views-blog-block .views-row-odd,
+.block-views-blog-block-1 .views-row-odd {
+  clear: both; }
 
 /* PAGINA MIEMBROS */
 .members-view .block-title {
