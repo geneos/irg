@@ -171,7 +171,7 @@ function simple_subscription_block_config_form() {
   $form['simple_subscription_form_header'] = array(
     '#type'          => 'textarea',
     '#title'         => t('Form header'),
-    '#default_value' => $config['form_header'],
+    '#default_value' => t($config['form_header']),
     '#description'   => t('This text will be displayed before the form elements (leave empty for none). You may use Html tags.'),
   );
 
@@ -312,7 +312,7 @@ function simple_subscription_form() {
   if (!empty($config['form_header'])) {
     $form['header'] = array(
       '#prefix'   =>  '<div class="simple_subscription_header">',
-      '#markup'  => filter_xss(token_replace($config['form_header'])),
+      '#markup'  => filter_xss(token_replace(t($config['form_header']))),
       '#suffix'   =>  '</div>',
     );
   }
