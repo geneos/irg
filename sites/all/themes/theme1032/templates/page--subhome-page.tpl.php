@@ -68,13 +68,174 @@
  * @see template_process()
  */
 ?>
+<?php if ( !theme_get_setting( 'theme1032_breadcrumb_show' ) ) :
+	$breadcrumb = NULL;
+endif; ?>
 
-<div id="page-wrapper" class="page-wrapper gacetilla">
+<?php if ( $main_menu ) : ?>
+	<a href="#main-menu" class="element-invisible element-focusable"><?php print t( 'Skip to navigation' ); ?></a>
+<?php endif; ?>
+<a href="#content" class="element-invisible element-focusable"><?php print t( 'Skip to main content' ); ?></a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<div id="page-wrapper" class="page-wrapper subhome">
 	<div id="page" class="page">
 		
+		<!-- Header
+		======================================================================================= -->
+		<header id="header" class="header page-header clearfix" role="banner">
+			<!-- Region Header Top -->
+			<?php if ( $page['header_top'] ) : ?>
+				<!--div class="container-12">
+					<div class="grid-12"-->
+						<div class="header-box"></div>
+						<div class="header-box"></div>
+						<div class="header-box"></div>
+						<div class="header-box"></div>
+						<div class="header-box"></div>
+						<?php print render( $page['header_top'] ); ?>
+					<!-- /div>
+				</div-->
+			<?php endif; ?>
+
+			<div class="<?php if ( theme_get_setting( 'theme1032_sticky_menu' ) ) { echo 'stickup '; } ?>header-section-1"> <!-- Sticky menu wrapper -->
+				<div class="container-12">
+					<div class="grid-12">
+						<div class="col1">
+							<!-- Logo -->
+							<?php if ( $logo || $site_name || $site_slogan ) :?>
+								<div id="logo" class="logo">
+									<?php if ( $logo ) : // logo image ?>
+										<a href="<?php print $front_page; ?>" title="<?php print t( 'Home' ); ?>" rel="home" id="img-logo" class="img-logo">
+											<img src="<?php print $logo; ?>" alt="<?php print t( 'Home' ); ?>">
+										</a>
+									<?php endif;
+										
+									if ( $site_name ) : //site name ?>
+										<h1 title="<?php print $site_name; ?>" id="site-name" class="site-name">
+											<a href="<?php print $front_page; ?>" title="<?php print $site_name; ?>"><?php print $site_name; ?></a>
+										</h1>
+									<?php endif;
+										
+									if ( $site_slogan ) : // site slogan ?>
+										<div title="<?php print $site_slogan; ?>" id="slogan" class="slogan">
+											<?php print $site_slogan; ?>
+										</div>
+									<?php endif; ?>
+								</div><!-- /#name-and-slogan -->
+								<?php if ( theme_get_setting( 'theme1032_multislogan' ) && !empty(theme_get_setting( 'theme1032_multislogan' )) ) : ?>
+									<div id="multislogan" class="multislogan">
+										<?php print theme_get_setting( 'theme1032_multislogan' ); ?>
+									</div>
+								<?php endif; ?>
+							<?php endif; ?>
+						</div>
+										
+						<div class="col2">
+							<!-- Region Menu -->
+							<?php if ( $page['menu'] ) :
+								print render( $page['menu'] );
+							endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="slogan" class="slogan">
+				<ul><li class="fr">L’IRG oeuvre à la fabrique de la gouvernance démocratique de la Transition écologique et sociale et du développement durable.
+</li><ul>
+					<?php print theme_get_setting( 'theme1032_slogan' ); ?>
+				</div>
+
+			<!-- Region Header -->
+			<?php if ( $page['header'] ) : 
+				theme1032_region_preffix ( 'header' );
+					print render( $page['header'] );
+				theme1032_region_suffix ( 'header' );
+			endif; ?>
+
+			<!-- Region Header bottom -->
+			<?php if ( $page['header_bottom'] ) : 
+				theme1032_region_preffix ( 'header_bottom' );
+					print render( $page['header_bottom'] );
+				theme1032_region_suffix ( 'header_bottom' );
+			endif; ?>
+		</header>
+
+		<!-- Content
+		======================================================================================= -->
+		<!-- Region Section 1 -->
+
+		<?php if ( $title && !$is_front ) :
+			print render( $title_prefix ); ?>
+				<!-- Page title -->
+				<h2 id="page-title" class="title page-title" ><?php print $title; ?></h2>
+			<?php print render( $title_suffix );
+		endif; ?>
+
+		<?php if ( $page['section_1'] ) : 
+			theme1032_region_preffix ( 'section_1' );
+				print render( $page['section_1'] );
+			theme1032_region_suffix ( 'section_1' );
+		endif; ?>
 		
+		<!-- Region Section 2 -->
+		<?php if ( $page['section_2'] ) : 
+			theme1032_region_preffix ( 'section_2' );
+				print render( $page['section_2'] );
+			theme1032_region_suffix ( 'section_2' );
+		endif; ?>
 		
+		<!-- Region Section 3 1 -->
+		<?php if ( $page['section_3_1'] ) : 
+			theme1032_region_preffix ( 'section_3_1' );
+				print render( $page['section_3_1'] );
+			theme1032_region_suffix ( 'section_3_1' );
+		endif; ?>
 		
+		<!-- Region Section 3 2 -->
+		<?php if ( $page['section_3_2'] ) : 
+			theme1032_region_preffix ( 'section_3_2' );
+				print render( $page['section_3_2'] );
+			theme1032_region_suffix ( 'section_3_2' );
+		endif; ?>
+
+		<!-- Region Section 3 3 -->
+		<?php if ( $page['section_3_3'] ) : 
+			theme1032_region_preffix ( 'section_3_3' );
+				print render( $page['section_3_3'] );
+			theme1032_region_suffix ( 'section_3_3' );
+		endif; ?>
+		
+		<!-- Region Section 4 -->
+		<?php if ( $page['section_4'] ) : 
+			theme1032_region_preffix ( 'section_4' );
+				print render( $page['section_4'] );
+			theme1032_region_suffix ( 'section_4' );
+		endif; ?>
+
+		<!-- Region Section 4 2 -->
+		<?php if ( $page['section_4_2'] ) : 
+			theme1032_region_preffix ( 'section_4_2' );
+				print render( $page['section_4_2'] );
+			theme1032_region_suffix ( 'section_4_2' );
+		endif; ?>
+		
+		<!-- Region Section 5 -->
+		<?php if ( $page['section_5'] ) : 
+			theme1032_region_preffix ( 'section_5' );
+				print render( $page['section_5'] );
+			theme1032_region_suffix ( 'section_5' );
+		endif; ?>
+		
+		<!-- Region Section 6 -->
+		<?php if ( $page['section_6'] ) : 
+			theme1032_region_preffix ( 'section_6' );
+				print render( $page['section_6'] );
+			theme1032_region_suffix ( 'section_6' );
+		endif; ?>
+		
+		<?php /*
 		<div id="main-wrapper" class="main-wrapper" role="main">
 			<div class="container-12">
 				<div class="grid-12">
@@ -151,6 +312,49 @@
 				</div>
 			</div>
 		</div>
-		x
+		*/?>
+		
+		<!-- Region Section 7 -->
+		<?php if ( $page['section_7'] ) : 
+			theme1032_region_preffix ( 'section_7' );
+				print render( $page['section_7'] );
+			theme1032_region_suffix ( 'section_7' );
+		endif; ?>
+		
+		<!-- Region Section 8 -->
+		<?php if ( $page['section_8'] ) : 
+			theme1032_region_preffix ( 'section_8' );
+				print render( $page['section_8'] );
+			theme1032_region_suffix ( 'section_8' );
+		endif; ?>
+		
+		<!-- Region Map -->
+		<?php if ( $page['map'] ) : 
+			theme1032_region_preffix ( 'map' );
+				print render( $page['map'] );
+			theme1032_region_suffix ( 'map' );
+		endif; ?>
+
+		<!-- Footer
+		======================================================================================= -->
+		<footer id="footer" class="footer page-footer" role="contentinfo">
+			<!-- Region Footer top -->
+			<?php if ( $page['footer_top'] ) : 
+				theme1032_region_preffix ( 'footer_top' );
+					print render( $page['footer_top'] );
+				theme1032_region_suffix ( 'footer_top' );
+			endif; ?>
+
+			<div class="footer-wrapper">
+				<div class="container-12">
+					<div class="grid-12 clearfix">
+						<!-- Region Footer -->
+						<?php if ( $page['footer'] ) :
+							print render( $page['footer'] );
+						endif; ?>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</div>
 </div>

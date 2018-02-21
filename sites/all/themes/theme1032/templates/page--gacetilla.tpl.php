@@ -68,7 +68,7 @@
  * @see template_process()
  */
 ?>
-
+<?php /* ?>
 <div id="page-wrapper" class="page-wrapper gacetilla">
 	<div id="page" class="page">
 		
@@ -132,13 +132,16 @@
 									<?php endif; ?>
 								</header>
 							<?php endif; ?>
-			
+			<?php */ ?>
 							<!-- Page content -->
 							<?php if ( $page['content'] ) :
-								print render( $page['content'] );
+								$body = field_get_items('node',$node, 'body');
+  								print $body[0]['value'];
+
+								//print render( $page['content'] );
 							endif; ?>
 						</div>
-			
+			<?php /* ?>
 						<?php if ( $page['sidebar_second'] ) : ?>
 							<!-- Right sidebar -->
 							<aside id="sidebar-second" class="sidebar-second sidebar grid-4 omega" role="complementary">
@@ -154,3 +157,4 @@
 		
 	</div>
 </div>
+<?php */ ?>

@@ -145,6 +145,14 @@ endif; ?>
 				</div>
 			</div>
 
+			<?php //if ( theme_get_setting( 'theme1032_multislogan' ) && !empty(theme_get_setting( 'theme1032_multislogan' )) ) : ?>
+				<div id="slogan" class="slogan">
+				<ul><li class="fr">L’IRG oeuvre à la fabrique de la gouvernance démocratique de la Transition écologique et sociale et du développement durable.
+</li><ul>
+					<?php print theme_get_setting( 'theme1032_slogan' ); ?>
+				</div>
+			<?php// endif; ?>
+
 			<!-- Region Header -->
 			<?php if ( $page['header'] ) : 
 				theme1032_region_preffix ( 'header' );

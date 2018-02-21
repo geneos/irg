@@ -54,27 +54,54 @@ ul.menu li a:hover {
 
 #multislogan {
 	float:left;
-	margin-top: 40px;
+	margin-top: 14px;
     margin-left: 10px;
+
+    ul {
+		margin:0px;
+
+		li {
+			color:$dark-gray;
+			text-transform: initial;
+			font-size:15px;
+			font-weight: 300;
+			margin:0px;
+			padding-left:5px;
+			display:none;
+		}
+	}
 }
 
-#multislogan ul{
-	margin:0px;
-}
-
-#multislogan li{
-	color:#bbb6ac;
-	text-transform: initial;
-	font-size:15px;
-	font-weight: 300;
-	margin:0px;
-	padding-left:5px;
-	display:none;
-}
 
 .i18n-es #multislogan li.es,
 .i18n-fr #multislogan li.fr,
 .i18n-en #multislogan li.en{
+	display:block;
+}
+
+#slogan {
+
+	border-bottom: 10px solid $main-red;
+	padding: 20px 0px;
+
+	ul {
+		margin:0px;
+
+		li {
+			color:$main-red;
+			text-transform: initial;
+			font-size:15px;
+			margin:0px;
+			display:none;
+			text-align:center;
+		}
+	}
+}
+
+
+.i18n-es #slogan li.es,
+.i18n-fr #slogan li.fr,
+.i18n-en #slogan li.en{
 	display:block;
 }
 
@@ -195,10 +222,11 @@ ul.menu li a:hover {
 
 .header-section-1 {
 	padding:0px;
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,0.2);
 }
 
 .header-section-1 .grid-12 {
-	padding:20px 0px;
+	padding:10px 0px;
 }
 
 .header-section-1 .col1 {
@@ -268,19 +296,19 @@ ul.menu li a:hover {
 
 .view-slider .flex-caption .style-1 p{
 	color:white;
-	font-size:22px;
-	line-height:30px
+	font-size:18px;
+	line-height:24px
 }
 
 .view-slider .flex-caption h2.title-1 a{
     display: inline-block;
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 26px;
+    line-height: 30px;
 }
 
 .view-slider .flex-caption h2.title-1{
     margin-bottom:5px !important;
-    margin-top:10px !important;
+    margin-top:5px !important;
 }
 
 /* Ver el width en los distintos quiebres para que siempre quede como el contenido */
@@ -314,11 +342,18 @@ ul.menu li a:hover {
 }
 
 .view-slider .flex-control-nav {
-    bottom: 30px;
+    bottom: 15px;
     left: 70%;
     display: inline-block;
     width: auto;
 }
+
+@media (max-width: 1500px) {
+	.view-slider .flex-control-nav {
+		bottom: 15px;
+	}
+}
+
 
 .view-slider .flex-control-nav li a:hover,
 .view-slider .flex-control-nav li a.flex-active {
@@ -427,8 +462,6 @@ ul.menu li a:hover {
 		line-height:20px;
 		margin:0 0 20px;
 		box-sizing:border-box;
-		margin-left: 15px;
-    	margin-right: 15px;
 
 		p {
 			margin:0; 
@@ -1316,12 +1349,12 @@ ul.links li a:hover,
 
 }
 .view-slider .flex-caption .inner {
-    padding: 10px 20px !important;
+    padding: 30px 20px 10px 20px !important;
 }
 
 @media (max-width: 1500px) {
 .view-slider .flex-caption .inner {
-		 padding: 10px 20px !important;
+		 padding: 30px 20px 10px 20px !important;
 	}
 }
 
@@ -1338,7 +1371,8 @@ ul.links li a:hover,
 	/*opacity: 0.5;*/
 	background-size:cover;
 	width:100%;
-	padding-bottom: 33%;
+	/*padding-bottom: 33%;*/
+	padding-bottom: 22%;
     box-sizing: border-box;
     position: relative;
     background-position:center center;
@@ -1370,10 +1404,10 @@ ul.links li a:hover,
 }*/
 
 .page-node #node-header .node-darkred-background {
-	height: 135px;
+	height: 35%;
     position: absolute;
     width: 100%;
-    top: 55%;
+    top: 44%;
     @include alpha-background-color(rgba($dark-gray,0.8),white);
 }
 
@@ -1386,9 +1420,9 @@ ul.links li a:hover,
 }
 
 .page-node #node-header .node-title {
-	@include alpha-background-color(rgba($main-red,0.8),white);	height: 176px;
+	@include alpha-background-color(rgba($main-red,0.8),white);	height: 135px;
     padding: 10px 30px;
-    margin-top: -32px;
+    margin-top: -30px;
 }
 
 .page-node #node-header .node-title h3{
@@ -1401,6 +1435,7 @@ ul.links li a:hover,
 	text-transform:initial;
 	text-align:left;
 	margin-top: 35px;
+	font-size:26px;
 }
 
 .page-node #content .node-content{
@@ -1409,24 +1444,44 @@ ul.links li a:hover,
 
 /** SKELETON FIXES **/
 
-.container-12 .grid-3 {
-    width: 262px;
-}
 
-.container-12 .grid-6 {
-    width: 555px;
-}
-
-.container-12 .grid-4 {
-    width: 360px;
-}
-
-.container-12 .grid-8 {
+.grid-12 .grid-8 {
     width: 690px;
 }
 
-.container-12 .grid-2 {
+.grid-12 .grid-6 {
+    width: 555px;
+}
+
+.grid-12 .grid-5 {
+    width: 457.5px;
+}
+
+.grid-12 .grid-4 {
+    width: 360px;
+}
+
+.grid-12 .grid-3 {
+	width: 262.5px;
+}
+
+.grid-12 .grid-2 {
     width: 164px;
+}
+
+.grid-12 .grid-3 {
+	/*diferencia de 28px */
+	&.block-twitter-block,
+	&.facebook-block {
+	    width: 234.5px;
+	}
+}
+
+.grid-12 .grid-5 {
+	&#block-views-block-3-2-2-block,
+	&#block-views-block-3-2-1-block {
+		 width: 485.5px;
+	}
 }
 
 .grid-10.container,
@@ -1443,10 +1498,10 @@ ul.links li a:hover,
 /*** SUB HOME ***/
 
 .subhome .page-title{
-	height: 70px;
+	height: 60px;
 	background-color:#C53C2D;
 	color:white;
-	line-height: 70px;
+	line-height: 50px;
 }
 
 .subhome #section_2_wrapper {
@@ -1768,5 +1823,31 @@ ul.links li a:hover,
 	.field-name-body {
 		font-size:14px;
 		color:$text-common;
+	}
+}
+
+/****** NEWSLETTER ******/
+.view-newsletter {
+	
+	font-size: 18px;
+
+	.views-field-field-fecha {
+		font-size:20px;
+		float:left;
+		color:$dark-gray;
+		margin-right:5px;
+		text-transform:uppercase;
+	}	
+
+	.views-field-field-fecha-1 {
+		font-size:20px;
+		float:left;
+		color:$dark-gray;
+		margin-right:10px;
+		text-transform:uppercase;
+	}
+
+	.views-field-title {
+
 	}
 }

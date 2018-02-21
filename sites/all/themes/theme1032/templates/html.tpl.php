@@ -50,8 +50,22 @@ print $doctype; ?>
 
 	<title><?php print $head_title; ?></title>
 
-	<?php print $styles;
-	print $scripts; ?>
+	<?php
+
+	$node = menu_get_object();
+
+	//Omito styles para los newsletter
+	if ($node != null and $node->type == 'gacetilla')
+		;
+	else
+		print $styles;
+
+	//Omito scripts para los newsletter
+	if ($node != null and $node->type == 'gacetilla')
+		;
+	else
+		print $scripts;
+	 ?>
 
 	<!--[if LT IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -80,8 +94,19 @@ print $doctype; ?>
 	}(document, 'script', 'facebook-jssdk'));
 	</script>
 
-	<?php print $page_top;
+	<?php 
+
+	//Omito page_top para los newsletter
+	if ($node != null and $node->type == 'gacetilla')
+		;
+	else
+		print $page_top;
 	print $page;
-	print $page_bottom; ?>
+	var_dump();
+	//Omito page_bottom para los newsletter
+	if ($node != null and $node->type == 'gacetilla')
+		;
+	else
+		print $page_bottom; ?>
 </body>
 </html>
