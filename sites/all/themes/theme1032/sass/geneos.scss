@@ -462,6 +462,7 @@ ul.menu li a:hover {
 		line-height:20px;
 		margin:0 0 20px;
 		box-sizing:border-box;
+		min-height:150px;
 
 		p {
 			margin:0; 
@@ -619,6 +620,7 @@ ul.menu li a:hover {
 .view-otras-actividades-home {
 	.views-row {
 		padding: 30px 50px 35px 20px;
+		margin: 0 15px;
 	}
 
 	.categoria-actividad {

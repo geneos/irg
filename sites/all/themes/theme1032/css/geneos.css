@@ -352,7 +352,8 @@ ul.menu li a:hover {
   position: relative;
   line-height: 20px;
   margin: 0 0 20px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  min-height: 150px; }
   .view-actividades-home .views-row p,
   .view-otras-actividades-home .views-row p {
     margin: 0;
@@ -468,7 +469,8 @@ ul.menu li a:hover {
   margin-top: -95px; }
 
 .view-otras-actividades-home .views-row {
-  padding: 30px 50px 35px 20px; }
+  padding: 30px 50px 35px 20px;
+  margin: 0 15px; }
 .view-otras-actividades-home .categoria-actividad a {
   color: #C53C2D;
   text-transform: uppercase; }
