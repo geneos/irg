@@ -589,3 +589,14 @@ function theme1032_form_contact_site_form_alter( &$form, &$form_state, $form_id 
 		'#weight' => 1,
 	);
 }
+
+function theme1032_slogan_bottom(){
+	$ret = '<div id="slogan" class="slogan"><ul>';
+	if (theme_get_setting( 'theme1032_slogan_fr' ))
+		$ret .= "<li class=\"fr\">".theme_get_setting( 'theme1032_slogan_fr' )."</li>";
+	if (theme_get_setting( 'theme1032_slogan_en' ))
+		$ret .= "<li class=\"en\">".theme_get_setting( 'theme1032_slogan_en' )."</li>";
+
+	$ret .= '</ul></div>';
+	return $ret;
+}

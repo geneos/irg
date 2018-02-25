@@ -72,6 +72,20 @@ function theme1032_form_system_theme_settings_alter( &$form, &$form_state ) {
 		    '#description'   => t("Slogan right to logo"),
 		  );
 
+		$form['theme1032_settings']['theme1032_general']['theme1032_slogan_fr'] = array(
+		    '#type'          => 'textfield',
+		    '#title'         => t('Multilang Slogan bottom (FR)'),
+		    '#default_value' => theme_get_setting( 'theme1032_slogan_fr' ),
+		    '#description'   => t("Slogan bottom to header (FR)"),
+		  );
+
+		$form['theme1032_settings']['theme1032_general']['theme1032_slogan_en'] = array(
+		    '#type'          => 'textfield',
+		    '#title'         => t('Multilang Slogan bottom (EN)'),
+		    '#default_value' => theme_get_setting( 'theme1032_slogan_en' ),
+		    '#description'   => t("Slogan bottom to header (EN)"),
+		  );
+
 		/**
 		 * Breadcrumb settings.
 		 */

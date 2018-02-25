@@ -141,11 +141,9 @@ endif; ?>
 				</div>
 			</div>
 
-			<div id="slogan" class="slogan">
-				<ul><li class="fr">L’IRG oeuvre à la fabrique de la gouvernance démocratique de la Transition écologique et sociale et du développement durable.
-</li><ul>
-					<?php print theme_get_setting( 'theme1032_slogan' ); ?>
-				</div>
+			<?php
+			print theme1032_slogan_bottom();
+			?>
 
 			<!-- Region Header -->
 			<?php if ( $page['header'] ) : 
