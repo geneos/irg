@@ -171,7 +171,7 @@ ul.menu li a:hover {
   padding: 0px; }
 
 .header-section-1 .col2 {
-  padding-top: 55px; }
+  padding-top: 15px; }
 
 /** MENU **/
 #superfish-1 > li {
@@ -199,6 +199,25 @@ ul.menu li a:hover {
 
 #superfish-1 > li ul li > a:hover, #superfish-1 > li ul li.active-trail > a, #superfish-1 > li ul li.sfHover > a {
   color: #bbb6ac; }
+
+/** MENU SECUNDARIO **/
+.secondary-menu {
+  margin-bottom: 24px; }
+  .secondary-menu ul {
+    margin-bottom: 5px;
+    margin-left: -5px; }
+    .secondary-menu ul li {
+      float: left;
+      margin-top: 0px;
+      padding: 0px; }
+      .secondary-menu ul li a {
+        font-weight: 300;
+        font-size: 10px;
+        color: #756f63;
+        padding: 0px 5px;
+        border-right: 1px solid #bbb6ac; }
+      .secondary-menu ul li:last-child a {
+        border: none; }
 
 /** SLIDER **/
 .view-slider .slider-darkred-background {
@@ -471,7 +490,7 @@ ul.menu li a:hover {
 .view-otras-actividades-home .views-row {
   padding: 30px 50px 35px 20px;
   margin: 5px 15px; }
-  .view-otras-actividades-home .views-row:nth-child(3n+1) {
+  .view-otras-actividades-home .views-row:nth-child(3n) {
     clear: both; }
 .view-otras-actividades-home .categoria-actividad a {
   color: #C53C2D;
@@ -849,6 +868,9 @@ ul.menu li a:hover {
   color: #333;
   font-size: 15px;
   margin-bottom: 50px; }
+.block-views-blog-block .view-empty,
+.block-views-blog-block-1 .view-empty {
+  color: #333; }
 .block-views-blog-block .views-field,
 .block-views-blog-block-1 .views-field {
   margin-bottom: 5px; }
@@ -1329,8 +1351,9 @@ ul.links li a:hover,
 .node-type-publication .field-name-field-imagen-portada {
   float: left;
   width: 550px;
-  margin-right: 25px img;
-    margin-right-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+  margin-right: 25px; }
+  .node-type-publication .field-name-field-imagen-portada img {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 .node-type-publication .field-name-field-fecha {
   font-size: 14px;
   color: #756f63;
