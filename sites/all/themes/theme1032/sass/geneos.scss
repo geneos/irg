@@ -14,6 +14,10 @@ a {
 	color:$main-red;
 }
 
+body {
+	color:$text-common;
+}
+
 /* Parallax FIX */
 .parallax-bg {
 	display:none;
@@ -234,7 +238,7 @@ ul.menu li a:hover {
 }
 
 .header-section-1 .col2 {
-    padding-top: 15px;
+    padding-top: 0px;
 }
 
 /** MENU **/
@@ -249,6 +253,10 @@ ul.menu li a:hover {
 
 .header-section-1 {
 	background-color:white;
+}
+
+#superfish-1 {
+	margin-bottom:10px;
 }
 
 #superfish-1 > li > a {
@@ -275,7 +283,7 @@ ul.menu li a:hover {
 /** MENU SECUNDARIO **/
 
 .secondary-menu {
-	margin-bottom: 24px;
+	margin-bottom: 34px;
 	ul {
 		margin-bottom:5px;
 		margin-left:-5px;
@@ -652,7 +660,7 @@ ul.menu li a:hover {
 		padding: 30px 50px 35px 20px;
 		margin: 5px 15px;
 
-		&:nth-child(3n){
+		&:nth-child(4n){
 			clear:both;
 		}
 	}
@@ -1135,15 +1143,6 @@ ul.menu li a:hover {
 
 .region-section-8 .view-contenido-relacionado .views-field-view-node a:hover:after{
 	background-color:#756f63;
-}
-
-/* PAGINA TAXONOMIA */
-.page-taxonomy .node-title{
-	color:$main-red;
-}
-
-.page-taxonomy .node-content{
-	color:#000;
 }
 
 /* PAGINA BLOG */
@@ -1907,5 +1906,55 @@ ul.links li a:hover,
 
 	.views-field-title {
 
+	}
+}
+
+/* PAGINA TAXONOMIA */
+.page-taxonomy .node-title{
+	color:$main-red;
+}
+
+.page-taxonomy .node-content{
+	color:#000;
+}
+
+.page-taxonomy {
+	
+	.taxonomy-term {
+		display:none;
+	}
+
+	.node-title{
+		color:$main-red;
+		font-size:$font-size-list-node-title;
+	    margin-bottom: 15px;
+	    text-transform: uppercase;
+	    line-height: 22px;
+
+	    a{
+			color:$main-red;
+
+		}
+	}
+
+	.node-content{
+		color:$text-common;
+	}
+
+	.field-name-field-image {
+
+		margin:0px;
+
+		img {
+			@include round-borders(10px);
+			    float: left;
+			    width: 400px;
+			    margin-right: 15px;
+		}
+	}
+
+	.field-name-body {
+		color:$text-common;
+		font-size:$font-size-common;
 	}
 }

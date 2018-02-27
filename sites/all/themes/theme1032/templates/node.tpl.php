@@ -79,9 +79,13 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-<?php print $node->nid; ?>" role="article"<?php print $attributes; ?>>
 	<?php $hitcount = statistics_get( $node->nid );
 	unset($content['links']['statistics']);
-	
+
+	//Print image first
+	$image = render( $content['field_image']);
+	print render($image);
+
 	if ( $title || $user_picture || $display_submitted ) : ?>
-		<header class="node-header clearfix">
+		<header class="node-header">
 			<!-- Node title -->
 			<?php if ( $title && !$page ) :
 				print render( $title_prefix ); ?>
@@ -97,6 +101,7 @@
 		<?php // We hide the comments, tags and links now so that we can render them later.
 		hide( $content['comments'] );
 		hide( $content['links'] );
+		hide( $content['field_image'] );
 		//hide( $content['field_tags'] ); ?>
 
 		<!-- Node content -->
