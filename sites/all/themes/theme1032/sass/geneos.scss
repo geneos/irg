@@ -801,6 +801,7 @@ ul.menu li a:hover {
 .view-block-4 .slick--carousel .footer {
 	background: #756f63;
 	padding: 15px 45px;
+	color:white;
 }
 
 .view-block-4 .slick--carousel .footer span{
@@ -1062,6 +1063,7 @@ ul.menu li a:hover {
 
 #section_7_wrapper {
 	background-color:$main-red;
+	min-height:190px;
 }
 
 .region-section-7 {
@@ -1923,6 +1925,11 @@ ul.links li a:hover,
 }
 
 .page-taxonomy {
+
+	.node {
+		margin-top:45px;
+		margin-bottom:5px;
+	}
 	
 	.taxonomy-term {
 		display:none;
@@ -1970,6 +1977,7 @@ ul.links li a:hover,
 
 .content ul.pager {
     padding-top: 30px;
+    margin-top:0px;
 	text-align:center;
 
 	li {
